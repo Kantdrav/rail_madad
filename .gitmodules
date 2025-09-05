@@ -1,0 +1,3 @@
+[submodule "CONTROL_ROOM_WEB/railmadad"]
+	path = CONTROL_ROOM_WEB/railmadad
+	url = https://github.com/Kantdrav/rail_madad.git
