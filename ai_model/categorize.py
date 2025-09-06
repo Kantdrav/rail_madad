@@ -56,12 +56,11 @@ for epoch in range(5):
 # Step 6: Predict new image
 # -----------------------------
 # Use the correct path to your image
-test_image_path = "/home/kantdravi/Desktop/classification/images/image.png"  # <- change to your local path
+image = "/home/kantdravi/Desktop/rail/rail_madad/images/image.png"
+if not os.path.exists(image):
+    raise FileNotFoundError(f"Image not found: {image}")
 
-if not os.path.exists(test_image_path):
-    raise FileNotFoundError(f"Image not found: {test_image_path}")
-
-img = Image.open(test_image_path).convert('RGB')
+img = Image.open(image).convert('RGB')
 img = transform(img).unsqueeze(0)  # Add batch dimension
 
 model.eval()
